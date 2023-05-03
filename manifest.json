@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Translate Page Extension",
+  "version": "1.0",
+  "description": "A Chrome extension to translate the current page to the user's language",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": "script-src 'self' https://translate.google.com; object-src 'self'",
+  "background": {
+    "scripts": ["popup.js"],
+    "persistent": false
+  }
+}
